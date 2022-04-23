@@ -40,3 +40,14 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+# Java and Gradle #
+############
+.gradle/
+out/
+out
+.gradle
+gradle
+gradlew.bat
+gradlew
+settings.gradle
