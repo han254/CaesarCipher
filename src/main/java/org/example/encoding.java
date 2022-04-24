@@ -49,13 +49,18 @@ public class encoding {
 
         for (int i = 0; i < this.getPlaintext().length(); i++) {
             Character myalphabet= this.getPlaintext().charAt(i);
-            Integer currentIndex =arrList.indexOf(myalphabet);
-            Integer cKey =currentIndex + this.cKey;
-            String cLetter = letters[cKey];
+            String cLetter;
+            if(myalphabet.toString() ==""){
+                cLetter="";
+            }else{
+                Integer currentIndex =arrList.indexOf(myalphabet.toString());
+                Integer cKey =currentIndex + this.cKey;
+                cLetter = arrList.get(cKey);
+            }
+
             this.cText =this.cText +""+ cLetter;
-            System.out.println(this.cKey);
         }
-        return "";
+        return this.cText;
     }
 }
 
