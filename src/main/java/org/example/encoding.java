@@ -4,13 +4,14 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 public class encoding {
     private String plaintext = "";
     public Integer cKey;
 
-    public static void setPlaintext(String plaintext) {
-        plaintext = plaintext;
+    public void setPlaintext(String plaintext) {
+        this.plaintext = plaintext.toLowerCase();
     }
 
     public String getPlaintext() {
@@ -27,24 +28,29 @@ public class encoding {
             this.setPlaintext(plaintext);
 
             System.out.print("Enter a key>>");
-            String cKey =bufferedReader.readLine();
-            this.cKey=Integer.parseInt(cKey);
+            String cKey = bufferedReader.readLine();
+            this.cKey = Integer.parseInt(cKey);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
-    public String cText(){
-        String[] letters={
+
+    public String cText() {
+        String[] letters = {
                 "A", "B", "C", "D", "E", "F", "G",
                 "H", "I", "J", "K", "L", "M", "N",
                 "O", "P", "Q", "R", "S", "T", "U",
                 "V", "W", "X", "Y", "Z"
         };
-        List<String> arrList = new ArrayList<String>(List.of (letters));
-        System.out.println(this.cKey);
+        List<String> arrList = new ArrayList<String>(List.of(letters));
+        this.setPlaintext(plaintext);
+
+        for (int i = 0; i < this.getPlaintext().length(); i++) {
+            System.out.println(this.cKey);
+        }
         return "";
     }
-    }
+}
 
 
