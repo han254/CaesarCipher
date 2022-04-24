@@ -14,18 +14,21 @@ public class encoding {
         return this.plaintext;
     }
 
-    public String cText() {
-        String cipherText="";
+    public void userInput() {
+        String cipherText = "";
         try {
             System.out.print("Enter plaintext>>");
             InputStreamReader streamReader = new InputStreamReader(System.in);
             BufferedReader bufferedReader = new BufferedReader(streamReader);
             String plaintext = bufferedReader.readLine();
-            System.out.print("Your Text is >>" +plaintext);
+            this.setPlaintext(plaintext);
         } catch (Exception e) {
-        e.printStackTrace();
+            e.printStackTrace();
         }
-        return cipherText;
     }
-}
+    public String cText(){
+        System.out.println(this.getPlaintext());
+    }
+    }
+
 

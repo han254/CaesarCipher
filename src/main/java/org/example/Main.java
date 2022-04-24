@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         encoding.setPlaintext("Java is interesting");
         System.out.println(Encoding.getPlaintext());
+        Encoding.userInput();
     }
 
     }
