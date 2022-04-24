@@ -7,7 +7,7 @@ public class encoding {
     private String plaintext = "";
 
     public static void setPlaintext(String plaintext) {
-        this.plaintext = plaintext;
+        plaintext = plaintext;
     }
 
     public String getPlaintext() {
@@ -27,7 +27,13 @@ public class encoding {
         }
     }
     public String cText(){
-        System.out.println(this.getPlaintext());
+        String[] letters={
+                "A", "B", "C", "D", "E", "F", "G",
+                "H", "I", "J", "K", "L", "M", "N",
+                "O", "P", "Q", "R", "S", "T", "U",
+                "V", "W", "X", "Y", "Z"
+        };
+        return "";
     }
     }
 
