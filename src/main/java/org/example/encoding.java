@@ -9,6 +9,7 @@ import java.util.Locale;
 public class encoding {
     private String plaintext = "";
     public Integer cKey;
+    public String cText="";
 
     public void setPlaintext(String plaintext) {
         this.plaintext = plaintext.toLowerCase();
@@ -49,6 +50,9 @@ public class encoding {
         for (int i = 0; i < this.getPlaintext().length(); i++) {
             Character myalphabet= this.getPlaintext().charAt(i);
             Integer currentIndex =arrList.indexOf(myalphabet);
+            Integer cKey =currentIndex + this.cKey;
+            String cLetter = letters[cKey];
+            this.cText =this.cText +""+ cLetter;
             System.out.println(this.cKey);
         }
         return "";
