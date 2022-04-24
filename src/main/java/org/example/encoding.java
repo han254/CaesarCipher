@@ -47,6 +47,8 @@ public class encoding {
         this.setPlaintext(plaintext);
 
         for (int i = 0; i < this.getPlaintext().length(); i++) {
+            Character myalphabet= this.getPlaintext().charAt(i);
+            Integer currentIndex =arrList.indexOf(myalphabet);
             System.out.println(this.cKey);
         }
         return "";
