@@ -26,7 +26,9 @@ public class encoding {
             String plaintext = bufferedReader.readLine();
             this.setPlaintext(plaintext);
 
-
+            System.out.print("Enter a key>>");
+            String cKey =bufferedReader.readLine();
+            this.cKey=Integer.parseInt(cKey);
 
         } catch (Exception e) {
             e.printStackTrace();
